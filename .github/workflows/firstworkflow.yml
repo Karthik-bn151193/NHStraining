@@ -7,10 +7,10 @@ jobs:
   steps: 
    - name: Checkout
      uses: actions/checkout@v4.2.2
-   - run: echo"ubuntu - lastest"
+   - run: echo "ubuntu - lastest"
  windows-os:
   runs-on: windows-latest
   steps: 
    - name: Checkout
      uses: actions/checkout@v4.2.2
-   - run: echo"ubuntu - lastest" 
+   - run: echo "ubuntu - lastest" 
