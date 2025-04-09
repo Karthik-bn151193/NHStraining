@@ -1,6 +1,6 @@
 name: First workflow
 run-name: ${{github.actor}}
-on: [push , pull_request]
+on: [push , pull_request_review]
 
 jobs:
  linux-os:
