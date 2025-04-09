@@ -1,29 +1,16 @@
-name: git-workshop
-on: [push, pull_request]
-# run-name: ${{github.actor}}
+name: First workflow
+on: push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    # $GITHUB_WORKSPACE
-    - name: checkout code
-      uses: actions/checkout@v4.2.2
-    - name: initialize npm
-      run: npm init -y
-    - name: install dependencies
-      run: npm install
-    # - name: build project
-    #   run: npm run build
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    # $GITHUB_WORKSPACE
-    - name: checkout
-      uses: actions/checkout@v4.2.2
-    - name: initialize npm
-      run: npm init -y
-    - name: install dependencies
-      run: npm install
-    # - name: Run Tests
-    #   run: npm test
+ linux-os:
+  runs-on: ubuntu-latest
+  steps: 
+   - name: Checkout
+     uses: actions/checkout@v4.2.2
+   - run: echo"ubuntu - lastest"
+ windows-os:
+  runs-on: windows-latest
+  steps: 
+   - name: Checkout
+     uses: actions/checkout@v4.2.2
+   - run: echo"ubuntu - lastest" 
