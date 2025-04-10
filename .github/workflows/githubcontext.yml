@@ -4,7 +4,7 @@ on:
  workflow_dispatch:
 
 jobs:
- echo-github-contect:
+ echo-github-context:
   runs-on: ubuntu-lastest
   steps:
    - name: "github context info"
