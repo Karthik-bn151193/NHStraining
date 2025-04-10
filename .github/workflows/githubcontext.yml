@@ -10,5 +10,6 @@ jobs:
    - name: "github context info"
      run: |
       echo 'Event name ${{github.event_name}}'
-      echo 'Event name ${{github.actor_id}}'
+      echo 'Actor ID ${{github.actor_id}}'
+      echo 'Reference details ${{github.ref}}'
       
