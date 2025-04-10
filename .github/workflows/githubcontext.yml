@@ -5,9 +5,9 @@ on:
 
 jobs:
  echo-github-context:
-  runs-on: ubuntu-lastest
+  runs-on: ubuntu-latest
   steps:
    - name: "github context info"
      run: |
-      echo 'Event name ${{github.event_name}}'
+      echo 'Event name ${{github}}'
       
