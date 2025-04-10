@@ -12,5 +12,7 @@ jobs:
       echo 'Event name ${{github.event_name}}'
       echo 'Actor ID ${{github.actor_id}}'
       echo 'Reference details ${{github.ref}}'
-      echo 'all details ${{github}}'
+      echo 'Commit SHA ${{github.sha}}'
+      echo 'Run ID ${{github.run_id}}'
+      echo 'Run number ${{github.run_number}}'
       
