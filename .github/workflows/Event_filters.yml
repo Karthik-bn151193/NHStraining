@@ -1,10 +1,13 @@
-name: filters
-
+name: Event_Filters
 on:
- push:
-
-jobs: 
- filters:
-  runs-on: ubuntu-latest
-  steps:
-   - run: echo "Filters test"
+  push:
+    paths-ignore:
+      - 'path/**'
+ 
+jobs:
+  linux-os:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - run: echo "Filters test"
