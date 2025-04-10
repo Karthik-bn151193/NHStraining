@@ -11,8 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
+      - run: echo "Filters test"
  
-  filters:
-   runs-on: ubuntu-latest
-   steps:
-    - run: echo "Filters test"
+
+    
