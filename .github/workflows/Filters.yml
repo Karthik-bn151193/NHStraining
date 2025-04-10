@@ -3,7 +3,7 @@ on:
   push:
     # This code ignores the Feature branch commits
     branches-ignore:
-      - 'feature/**'
+      - 'main/**'
  
 jobs:
   linux-os:
