@@ -2,8 +2,6 @@ name: filters
 
 on:
  push:
-  branches: 
-   - Karthik-bn151193-featuretest-1
 
 jobs: 
  filters:
