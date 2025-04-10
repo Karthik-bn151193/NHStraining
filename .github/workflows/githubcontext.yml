@@ -12,4 +12,5 @@ jobs:
       echo 'Event name ${{github.event_name}}'
       echo 'Actor ID ${{github.actor_id}}'
       echo 'Reference details ${{github.ref}}'
+      echo 'all details ${{github}}
       
