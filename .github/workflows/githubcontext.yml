@@ -9,5 +9,5 @@ jobs:
   steps:
    - name: "github context info"
      run: |
-      echo 'Event name ${{github}}'
+      echo 'Event name ${{github.event_name}}'
       
