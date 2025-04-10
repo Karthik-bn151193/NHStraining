@@ -1,1 +1,12 @@
+name: path ignore
+run-name: ${{github.actor}}
+on:
+ push:
 
+jobs:
+ linux-os:
+  runs-on: ubuntu-latest
+  steps: 
+   - name: Checkout
+     uses: actions/checkout@v4.2.2
+   - run: echo "ubuntu - lastest"
