@@ -1,17 +1,12 @@
-name: First workflow
-run-name: ${{github.actor}}
-on: [push , pull_request_review,workflow_dispatch]
+name: filters
 
-jobs:
- linux-os:
+on:
+ push:
+  branches-ignore: 
+   - master
+
+jobs: 
+ filters:
   runs-on: ubuntu-latest
-  steps: 
-   - name: Checkout
-     uses: actions/checkout@v4.2.2
-   - run: echo "ubuntu - lastest"
- windows-os:
-  runs-on: windows-latest
-  steps: 
-   - name: Checkout
-     uses: actions/checkout@v4.2.2
-   - run: echo "ubuntu - lastest" 
+  steps:
+   - run: echo "Filters test"
