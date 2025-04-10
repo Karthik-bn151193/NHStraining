@@ -1,0 +1,12 @@
+name: filters
+
+on:
+ push:
+  branches: 
+   - master
+
+jobs: 
+ filters:
+  runs-on: ubuntu-latest
+  steps:
+   - run: echo "Filters test"
