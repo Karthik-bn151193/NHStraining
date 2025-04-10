@@ -4,6 +4,8 @@ on:
     # This code ignores the main branch commits
     branches-ignore:
       - main
+    paths-ignore:
+       - .github/workflows/Event_filters.yml
  
 jobs:
   linux-os:
