@@ -1,9 +1,9 @@
 name: Event_Filters
 on:
   push:
-    # This code ignores the Feature branch commits
+    # This code ignores the main branch commits
     branches-ignore:
-      - 'main/**'
+      - main
  
 jobs:
   linux-os:
