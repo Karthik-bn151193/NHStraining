@@ -1,0 +1,13 @@
+name: Github context
+
+on: 
+ workflow_dispatch:
+
+jobs:
+ echo-github-contect:
+  runs-on: ubuntu-lastest
+  steps:
+   - name: "github context info"
+     run: |
+      echo 'Event name ${{github.event_name}}'
+      echo 'Event complete details ${{github}}
