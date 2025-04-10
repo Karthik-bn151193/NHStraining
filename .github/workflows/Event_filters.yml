@@ -3,7 +3,7 @@ name: filters
 on:
  push:
   branches: 
-   - master
+   - Karthik-bn151193-featuretest-1
 
 jobs: 
  filters:
