@@ -1,12 +1,18 @@
-name: filters
-
+name: Event_Filters
 on:
- push:
-  branches-ignore: 
-   - main
-
-jobs: 
- filters:
-  runs-on: ubuntu-latest
-  steps:
-   - run: echo "Filters test"
+  push:
+    # This code ignores the Feature branch commits
+    branches-ignore:
+      - 'feature/**'
+ 
+jobs:
+  linux-os:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+ 
+  filters:
+   runs-on: ubuntu-latest
+   steps:
+    - run: echo "Filters test"
