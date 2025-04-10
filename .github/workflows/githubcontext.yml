@@ -10,4 +10,4 @@ jobs:
    - name: "github context info"
      run: |
       echo 'Event name ${{github.event_name}}'
-      echo 'Event complete details ${{github}}'
+      
