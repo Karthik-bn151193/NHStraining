@@ -4,7 +4,7 @@ on:
     inputs:
       username:
         description: 'Trainee Name'
-        default: 'Akash'
+        default: 'Karthik BN'
         required: false
         type: string
       
