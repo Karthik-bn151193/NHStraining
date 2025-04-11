@@ -21,7 +21,7 @@ jobs:
         id: demo
         run: |
           echo 'Hi ${{ inputs.username }}'
-          echo 'You are attending Session-number: ${{ vars.actions }}'
+          echo 'You are attending Session-number: ${{ vars.repovar }}'
           echo "Session conducted by: ${{ env.NAME }}"
           echo "Number session: ${{ matrix.session }}"
           echo "Credentials for the training: ${{ env.access_cred }}"
