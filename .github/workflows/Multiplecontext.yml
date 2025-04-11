@@ -18,7 +18,7 @@ on:
 jobs:
   linux_job:
     runs-on: ubuntu-latest
-    environment: ${{input.class}}
+    environment: ${{inputs.class}}
     outputs:
       output1: ${{ steps.demo.outputs.test }}
     strategy:
