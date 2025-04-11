@@ -7,10 +7,18 @@ on:
         default: 'Akash'
         required: false
         type: string
+      
+      ENV:
+       type: environment
+       default: 'dev'
+       required: true
+       description: 'Types of Environment'
+       
  
 jobs:
   linux_job:
     runs-on: ubuntu-latest
+    environment: ${{input.env}}
     outputs:
       output1: ${{ steps.demo.outputs.test }}
     strategy:
