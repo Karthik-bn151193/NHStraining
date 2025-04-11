@@ -23,7 +23,7 @@ jobs:
       output1: ${{ steps.demo.outputs.test }}
     strategy:
       matrix:
-        session: [1, 2]
+        session: [1, 2, 3]
     steps:
       - name: Print the training session number
         id: demo
