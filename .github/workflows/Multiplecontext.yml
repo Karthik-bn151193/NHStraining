@@ -1,0 +1,40 @@
+name: CONTEXT
+on: 
+ workflow_dispatch:
+    inputs:
+      username:
+        description: 'Trainee Name'
+        default: 'Akash'
+        required: false
+        type: string
+ 
+jobs:
+  linux_job:
+    runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.demo.outputs.test }}
+    strategy:
+      matrix:
+        session: [1, 2]
+    steps:
+      - name: Print the training session number
+        id: demo
+        run: |
+          echo 'Hi ${{ inputs.username }}'
+          echo 'You are attending Session-number: ${{ vars.actions }}'
+          echo "Session conducted by: ${{ env.NAME }}"
+          echo "Number session: ${{ matrix.session }}"
+          echo "Credentials for the training: ${{ env.access_cred }}"
+          echo "Name of the OS: ${{ runner.os }}"
+          echo "test=welcome to the training" >> "$GITHUB_OUTPUT"
+        env:
+          NAME: karthika
+          access_cred: ${{ secrets.API_KEY }}
+ 
+      - name: Check job status
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "Job succeeded"
+          else
+            echo "Job failed"
+          fi
