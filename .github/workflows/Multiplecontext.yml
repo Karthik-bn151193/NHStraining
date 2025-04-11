@@ -8,7 +8,7 @@ on:
         required: false
         type: string
       
-      ENV:
+      class:
        type: environment
        default: 'dev'
        required: true
@@ -18,7 +18,7 @@ on:
 jobs:
   linux_job:
     runs-on: ubuntu-latest
-    environment: ${{input.ENV}}
+    environment: ${{input.class}}
     outputs:
       output1: ${{ steps.demo.outputs.test }}
     strategy:
